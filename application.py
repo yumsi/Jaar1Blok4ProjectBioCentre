@@ -1,13 +1,12 @@
 ########################################################################
 # Author:Han Teunissen and Harm Laurense
-# last update: 13-6-2019
+# last update: 14-6-2019
 # Function: Runs the project webaplication
 # Known bugs: Sometimes does not render the header in the HTML documnents
 # correctly
 ########################################################################
 from flask import Flask, render_template, request
 import mysql.connector
-
 
 app = Flask(__name__)
 
@@ -123,11 +122,11 @@ def get_query(q_string):
         cursor = conn.cursor()
         # Query for the database
         query = """SELECT  """ + q_string + """
-                FROM ProjectBlok4_Protein
-                JOIN ProjectBlok4_Lineage ON ProjectBlok4_Protein.Eiwit_ID=ProjectBlok4_Lineage.Lineage_ID
-                JOIN ProjectBlok4_Fragment ON ProjectBlok4_Protein.Eiwit_ID=ProjectBlok4_Fragment.Fragment_ID
-                JOIN ProjectBlok4_Function ON ProjectBlok4_Protein.Eiwit_ID=ProjectBlok4_Function.Functie_ID
-                JOIN ProjectBlok4_Taxonomy ON ProjectBlok4_Protein.Eiwit_ID=ProjectBlok4_Taxonomy.Taxonomie_ID
+        FROM ProjectBlok4_Protein
+        JOIN ProjectBlok4_Lineage ON ProjectBlok4_Protein.Eiwit_ID=ProjectBlok4_Lineage.Lineage_ID
+        JOIN ProjectBlok4_Fragment ON ProjectBlok4_Protein.Eiwit_ID=ProjectBlok4_Fragment.Fragment_ID
+        JOIN ProjectBlok4_Function ON ProjectBlok4_Protein.Eiwit_ID=ProjectBlok4_Function.Functie_ID
+        JOIN ProjectBlok4_Taxonomy ON ProjectBlok4_Protein.Eiwit_ID=ProjectBlok4_Taxonomy.Taxonomie_ID
     WHERE ProjectBlok4_Protein.Accessiecode LIKE '%""" + name + """%'or  
       ProjectBlok4_Protein.Alignment_scores LIKE '%""" + name + """%' or
       ProjectBlok4_Protein.Eiwit_Naam LIKE '%""" + name + """%' or 
@@ -183,19 +182,25 @@ def select_count():
 
 def count_org_getquery(conn, zoekwoord):
     """ The count_org_getquery function cconnects to the database calls the
-    functionrow_sorter. And than
-    processes the query using mysql.connector.
+    functionrow_sorter. And than processes the query using mysql.connector.
+    When the user does not enter a search term it will show all the results
      Finally the funcitons returns the results from the query as
      count_results
      :param conn: connection info to th edatabase
      :param zoekwoord: search term from the user"""
     cursor = conn.cursor()
-    # database query
-    query = """select Lineage_naam
-from ProjectBlok4_Lineage join ProjectBlok4_Fragment
-where Lineage_ID = Fragment_ID and Lineage_naam like '%""" + zoekwoord + """%'
-group by Fragment_naam
-;"""
+    if zoekwoord == '':
+        # database query
+        query = """select Lineage_naam
+        from ProjectBlok4_Lineage join ProjectBlok4_Fragment
+        where Lineage_ID = Fragment_ID 
+        group by Fragment_naam;"""
+    else:
+        # database query
+        query = """select Lineage_naam
+        from ProjectBlok4_Lineage join ProjectBlok4_Fragment
+        where Lineage_ID = Fragment_ID and Lineage_naam like '%""" + zoekwoord + """%'
+        group by Fragment_naam;"""
     cursor.execute(query)
     rows = cursor.fetchall()
     count_result = row_sorter(rows)
@@ -204,19 +209,25 @@ group by Fragment_naam
 
 def count_eiwit_getquery(conn, zoekwoord):
     """ The count_eiwit_getquery function cconnects to the database calls the
-    function row_sorter. And than
-    processes the query using mysql.connector.
+    function row_sorter. And than processes the query using mysql.connector.
+    When the user does not enter a search term it will show all the results
      Finally the funcitons returns the results from the query as
      count_results
      :param conn: connection info to th edatabase
      :param zoekwoord: search term from the user"""
     cursor = conn.cursor()
-    # database query
-    query = """select Eiwit_Naam
-from projectblok4_protein join projectblok4_fragment
-where Eiwit_ID = Fragment_ID and Eiwit_Naam like '%""" + zoekwoord + """%'
-group by Fragment_naam
-;"""
+    if zoekwoord == '':
+        # database query
+        query = """select Eiwit_naam
+        from ProjectBlok4_Protein join ProjectBlok4_Fragment
+        where Eiwit_ID = Fragment_ID  
+        group by Fragment_naam;"""
+    else:
+        # database query
+        query = """select Eiwit_naam
+        from ProjectBlok4_Protein join ProjectBlok4_Fragment
+        where Eiwit_ID = Fragment_ID and Eiwit_Naam like '%""" + zoekwoord + """%'
+        group by Fragment_naam;"""
     cursor.execute(query)
     rows = cursor.fetchall()
     count_result = row_sorter(rows)
