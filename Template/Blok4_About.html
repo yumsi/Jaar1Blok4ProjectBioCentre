@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blast website</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',
+        filename='style.css') }}">
+</head>
+<header id="main-header">
+    <h1 id="header">Blastwebsite</h1>
+</header>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body class="main-body">
+<nav>
+    <div class="navbar">
+        <ul>
+            <li><a href="Blok4_Home.html">Home</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">Resultaat
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="Blok4_Count_Org.html">Resultaat count</a>
+                    <a href="Blok4_Blast.html">Resultaat filter</a>
+                </div>
+            </div>
+            <li><a href="Blok4_Help.html">Help</a></li>
+            <li><a href="Blok4_About.html">About</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="about">
+    <h2>Informatie over de database</h2>
+    <h4>Waar komt onze data vandaan?</h4>
+    <p>Onze data is afkomtig van DNA isolatie samples die zijn genomen uit de
+        2e fase van compostbereiding. Dit is vervolgens gesequenced door
+        Illumina Miseq PE300. De verkregen data is aligned m.b.v. BLASTx tegen
+        de nr database, en resultaten zijn in een database opgeslagen. Voor
+        meer informatie over de champignonteelt klik <a
+                href="https://mushroomoffice.com/nl/champignonteelt/">hier</a>
+    </p>
+</div>
+
+<div class="about">
+    <h4>Welke parameters zijn er bij BLASTx gebruikt?</h4>
+    <p>Bij het gebruik maken van BLAST zijn alle parameters normaal gelaten
+        . Er zijn dus geen extra filterstappen genomen. Voor zelf blasten
+        klik <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi">hier</a></p>
+</div>
+<div class="about">
+    <h4>Waar komen de aanvullende resultaten vandaan?</h4>
+    <p>Onze aanvullende informatie zoals de taxonomie en descriptie zijn
+        afkomstig van de NCBI. Deze informatie is automatisch uit de
+        protein database gehaald. Deze informatie is <u>niet</u> altijd
+        compleet en wij streven om dit wel compleet te maken.</p>
+</div>
+<div class="side-image-left">
+    <img src="../static/giphy.gif" alt="mushroom gif" class="image-about">
+</div>
+<div class="contact">
+    <h5>Contactgegevens</h5>
+    <p>Als u nog verdere vragen heeft of iets wilt bespreken over de website
+        zijn we te bereiken op:
+        <br>
+        E-mail: probaly_school_stuff@outlook.com<br>
+        Telefonisch: 040-123456
+    </p>
+</div>
+<div class="side-image-right">
+    <img src="../static/giphy.gif" alt="mushroom gif" class="image-about">
+</div>
+</body>
+
+</html>

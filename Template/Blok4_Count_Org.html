@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Blast website</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',
+        filename='style.css') }}">
+</head>
+<title>Blastwebsite</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body class="main-body">
+<header id="main-header">
+    <h1 id="header">Blastwebsite</h1>
+</header>
+<nav>
+    <div class="navbar">
+        <ul>
+            <li><a href="Blok4_Home.html">Home</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">Resultaat
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="Blok4_Count_Org.html">Resultaat count</a>
+                    <a href="Blok4_Blast.html">Resultaat filter</a>
+                </div>
+            </div>
+            <li><a href="Blok4_Help.html">Help</a></li>
+            <li><a href="Blok4_About.html">About</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="info-bar">
+    <p>Hieronder vindt u de filteropties om tegen een eiwit of organisme
+        database. Dit is afhankelijk van welk bolletje u aanklikt. <br>Hier
+        wordt automatisch het aantal organisme/eiwitten geteld die
+        overeenkomen met uw ingevoerde zoekwoord<br><br>
+        Als u vragen heeft over de database/of over de website klik
+        <a href="../static/HanHarm_Technische_documentatie_Blok4.docx"
+           download>hier</a> voor de technische
+        documentatie
+        <br>Als u vragen heeft over de filteropties klik <a
+                href="Blok4_Help.html">hier</a></p>
+</div>
+<div class="filter2">
+    <form action="http://localhost:5000/count_org"
+          method="post">
+        <label> Vul hier een zoekwoord in:</label>
+        <input type="text" name="zoekwoord">
+        <br>    *Laat de zoekbaar leeg voor alle resultaten.
+        <br>
+        <br>
+        <br>
+        <br>
+        <label>Wat wil je te zien krijgen<br>
+            <div id="tooltip">
+                <input type="radio" name="choice" value="Organismen">
+                Organismen<br>
+                <span class="tooltiptext">Telt alle eiwitten met het
+                    ingevulde zoekwoord</span>
+            </div>
+            <br>
+            <div id="tooltip">
+                <input type="radio" name="choice" value="Eiwitten">
+                Eiwitten<br>
+                <span class="tooltiptext">Telt alle orgismen met het
+                    ingevulde zoekwoord</span>
+            </div>
+        </label>
+        <br>
+        <br>
+        <input type="submit" value="submit">
+    </form>
+</div>
+<table id="blast">
+    {% for i in column %}
+        <th>{{ i }}</th>
+    {% endfor %}
+    {% for row in resultaat %}
+        <tr>
+            {% for data in row %}
+                <td>{{ data }}</td>
+            {% endfor %}
+        </tr>
+    {% endfor %}
+</table>
+</body>
+</html>

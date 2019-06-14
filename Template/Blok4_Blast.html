@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Blast website</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',
+        filename='style.css') }}">
+</head>
+<title>Blastwebsite</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body class="main-body">
+<header id="main-header">
+    <h1 id="header">Blastwebsite</h1>
+</header>
+<nav>
+    <div class="navbar">
+        <ul>
+            <li><a href="Blok4_Home.html">Home</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">Resultaat
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="Blok4_Count_Org.html">Resultaat count</a>
+                    <a href="Blok4_Blast.html">Resultaat filter</a>
+                </div>
+            </div>
+            <li><a href="Blok4_Help.html">Help</a></li>
+            <li><a href="Blok4_About.html">About</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="info-bar">
+    <p>Hieronder vindt u de filteropties om tegen <u>Biocentre database</u>
+        te filteren.<br>
+        <br>
+        Als u vragen heeft over de database/of over de website klik
+        <a href="../static/HanHarm_Technische_documentatie_Blok4.docx"
+           download>hier</a> voor de technische
+        documentatie,
+        <br>Als u vragen heeft over de filteropties klik <a
+                href="Blok4_Help.html">hier</a>.</p>
+</div>
+<aside>
+    <div class="filter">
+        <form action="http://localhost:5000/invoer" method="post">
+            <div id="tooltip">
+                <span class="tooltiptext">Elk vakje geeft een kolom aan</span>
+            </div>
+            <div id="tooltip">
+                <label> Vul hier een zoekterm in</label>
+                <input type="text" name="zoekwoord">
+                <span class="tooltiptext">Voer iets in waartegen de
+                    database zoekt</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div id="tooltip">
+                <label> Vul hier de resultaat limiet in</label>
+                <input type="text" name="limit">
+                <span class="tooltiptext">Geeft het aantal resultaten.
+                    Het aantal is standaard 100 (als het vak leeg is)</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div id="tooltip">
+                <label>Wat wil je te zien krijgen</label>
+                <span class="tooltiptext">Elk vakje geeft een kolom aan</span>
+            </div>
+            <br>
+            <div id="tooltip">
+                <input type="checkbox" id="cbgroup1_master"
+                       onchange="togglecheckboxes(this,'cbgroup1')"> Toggle All<br>
+                <span class="tooltiptext">Klikt elk vakje automatisch
+                    aan</span>
+            </div>
+            <br>
+            <div id="tooltip">
+                <input type="checkbox" id="cb1_12" class="cbgroup1" name="FRAG"
+                       value="Fragment_naam">Fragment header<br>
+                <span class="tooltiptext">Unieke code uit orginele data</span>
+            </div>
+            <br>
+            <div id="tooltip">
+                <input type="checkbox" id="cb1_8" class="cbgroup1" name="ORG"
+                       value="Lineage_naam">Micro-organisme<br>
+                <span class="tooltiptext">Naam van micro-organismen</span>
+            </div>
+            <br>
+            <div id="tooltip">
+                <input type="checkbox" id="cb1_10" class="cbgroup1" name="TAX"
+                       value="Taxonomie">Taxonomie<br>
+                <span class="tooltiptext">Taxonomie van het organisme</span>
+            </div>
+            <br>
+            <div id="tooltip">
+                <input type="checkbox" id="cb1_9" class="cbgroup1"
+                       name="ACSORG"
+                       value="Accessiecode_taxonomie">Taxonomie
+                accessiecode<br>
+                <span class="tooltiptext">Unieke code voor de taxonomie voor
+                    andere databases</span>
+            </div>
+            <br>
+            <div id="tooltip">
+                <input type="checkbox" id="cb1_3" class="cbgroup1" name="PROT"
+                       value="Eiwit_Naam">Eiwit<br>
+                <span class="tooltiptext">Naam van het eiwit</span>
+            </div>
+            <br>
+            <div id="tooltip">
+                <input type="checkbox" id="cb1_2" class="cbgroup1" name="EVAL"
+                       value="Expect">E-value<br>
+                <span class="tooltiptext">Betrouwbaarheid; de kans dat
+                    dezelfde sequentie in de (NCBI nr) database staat
+                </span>
+            </div>
+            <br>
+            <div id="tooltip">
+                <input type="checkbox" id="cb1_4" class="cbgroup1" name="ALS"
+                       value="Alignment_scores">Alignment score<br>
+                <span class="tooltiptext">De score van de BLASTx
+                    alignement</span>
+            </div>
+            <br>
+            <div id="tooltip">
+                <input type="checkbox" id="cb1_5" class="cbgroup1" name="IDEN"
+                       value="Per_ident">% identity<br>
+                <span class="tooltiptext">Het overeenkomst percentage
+                    met de database sequentie</span>
+            </div>
+            <br>
+            <div id="tooltip">
+                <input type="checkbox" id="cb1_6" class="cbgroup1" name="QCOV"
+                       value="Query_coverage">Query coverage<br>
+                <span class="tooltiptext">De overeenkomst van jouw
+                    sequente met de database</span>
+            </div>
+            <br>
+            <div id="tooltip">
+                <input type="checkbox" id="cb1_13" class="cbgroup1" name="DESC"
+                       value="Functie_naam">Eiwit Funcie<br>
+                <span class="tooltiptext">Descriptie van het eiwit</span>
+            </div>
+            <br>
+            <div id="tooltip">
+                <input type="checkbox" id="cb1_1" class="cbgroup1" name="ACS"
+                       value="Accessiecode">Eiwit accessiecode<br>
+                <span class="tooltiptext">Unieke code voor de taxonomie voor
+                    andere databases</span>
+            </div>
+            <br>
+            <div id="tooltip">
+                <input type="checkbox" id="cb1_11" class="cbgroup1"
+                       name="FRAGSEQ"
+                       value="Fragment_sequentie">Fragment sequentie<br>
+                <span class="tooltiptext">Nucleotide sequentie uit de orginele
+                    data</span>
+            </div>
+            <br>
+            <div id="tooltip">
+                <input type="checkbox" id="cb1_7" class="cbgroup1" name="SEQ"
+                       value="Sequentie">Eiwit sequentie<br>
+                <span class="tooltiptext">Eiwitsequentie van de BLASTx
+                    hit</span>
+            </div>
+            <br>
+
+
+            <input type="submit" value="submit">
+        </form>
+    </div>
+</aside>
+<div class="blast-result">
+    <table id="blast">
+        {% for i in column %}
+            <th>{{ i }}</th>
+        {% endfor %}
+        {% for row in resultaat %}
+            <tr>
+                {% for data in row %}
+                    <td>{{ data }}</td>
+                {% endfor %}
+            </tr>
+        {% endfor %}
+    </table>
+</div>
+<script>
+    function togglecheckboxes(master, group) {
+        var cbarray = document.getElementsByClassName(group);
+        for (var i = 0; i < cbarray.length; i++) {
+            var cb = document.getElementById(cbarray[i].id);
+            cb.checked = master.checked;
+        }
+    }
+</script>
+
+</body>
+</html>

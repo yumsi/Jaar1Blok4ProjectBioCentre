@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="e69f7a81-ba6b-4a61-8a26-3eaeaff754e6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -68,6 +67,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -84,7 +84,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -126,7 +125,8 @@
       <updated>1560532298076</updated>
       <workItem from="1560532299823" duration="345000" />
       <workItem from="1560532659502" duration="2194000" />
-      <workItem from="1560543213115" duration="278000" />
+      <workItem from="1560543213115" duration="416000" />
+      <workItem from="1560550720268" duration="229000" />
     </task>
     <task id="LOCAL-00001" summary="Zie die file">
       <created>1560532441709</created>
@@ -205,16 +205,24 @@
       <option name="project" value="LOCAL" />
       <updated>1560534024493</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="requirement text update">
+      <created>1560543512558</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1560543512559</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="2817000" />
+    <option name="totallyTimeSpent" value="3202000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25718608" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.26096824" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -248,7 +256,8 @@
     <MESSAGE value="Test commit ok" />
     <MESSAGE value="Een andere commit" />
     <MESSAGE value="een 2 commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="een 2 commit" />
+    <MESSAGE value="requirement text update" />
+    <option name="LAST_COMMIT_MESSAGE" value="requirement text update" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/WebbApp/LEEROY JENKINS" />

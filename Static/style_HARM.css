@@ -1,0 +1,228 @@
+* {
+    box-sizing: border-box;
+}
+
+.navbar ul {
+    list-style-type: none;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+#main-header {
+    width: 100%;
+    height: 75px;
+    background-image: url("../static/dna-curtain.jpg");
+    text-align: left;
+    margin-top: -21px;
+    margin-left: -8px;
+    margin-right: -8px;
+    margin-bottom: -20px;
+    padding: 0;
+
+}
+
+#header {
+    color: #86989B;
+    font-family: "Comic Sans MS";
+}
+
+.main-body {
+    background-image: url("240_F_152577066_WvccQCh0vBhTyF5OCINWGFuzBJNzgB63.jpg");
+}
+
+.filter {
+    float: left;
+    margin-top: 100px;
+    width: 30%;
+    background: #ccc;
+}
+
+.blast-result {
+    float: right;
+    width: 70%;
+    background-color: #f1f1f1;
+}
+
+@media (max-width: 600px) {
+    nav {
+        width: 100%;
+        height: auto;
+    }
+}
+
+
+.updates {
+    background-color: #000000;
+    padding: 20px;
+    margin-top: 200px;
+    width: 50%;
+    color: #ffffff;
+
+}
+
+.about {
+    background-color: #485F6E;
+    padding: 20px;
+    margin-top: 50px;
+    width: 50%;
+    color: #000000;
+}
+
+.image-about{
+    height: 200px;
+    width: 200px;
+    margin-top: 50px;
+}
+.loader {
+    background: none repeat scroll 0 0 #3A7734;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+}
+
+.loader.loader_inner {
+    background-image: url("/static/dna_gif.gif");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-color: #000000;
+    height: 60px;
+    width: 60px;
+    margin-top: -30px;
+    margin-left: -30px;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+}
+
+/*table#blast {*/
+/*    table-layout: fixed;*/
+/*}*/
+
+table#blast td {
+    border-collapse: separate;
+    text-align: right;
+    color: black;
+    background-color: #30799B;
+}
+
+table#blast td:hover {
+    background-color: #485F6E;
+}
+
+table #blast tr {
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #3A7734;
+}
+table #blast table, th{
+    background-color: #30799B;
+    color: #ffffff;
+    border: 1px solid black;
+    padding: -5px;
+}
+
+/** {*/
+/*  box-sizing: border-box;*/
+/*}*/
+
+/*.navbar ul {*/
+/*    list-style-type: none;*/
+/*    margin-left: -8px;*/
+/*    margin-right: -8px;*/
+/*    padding: 0;*/
+/*    overflow: hidden;*/
+/*    background-color: #333;*/
+/*}*/
+
+/*.navbar li {*/
+/*    float: left;*/
+/*}*/
+
+/*li a {*/
+/*    display: block;*/
+/*    color: white;*/
+/*    text-align: center;*/
+/*    padding: 14px 16px;*/
+/*    text-decoration: none;*/
+/*}*/
+
+/*li a:hover {*/
+/*    background-color: #111;*/
+/*}*/
+
+/*#main-header {*/
+/*    width: 100%;*/
+/*    height: 75px;*/
+/*    background-image: url("dna-curtain.jpg");*/
+/*    text-align: left;*/
+/*    margin-top: -21px;*/
+/*    margin-left: -8px;*/
+/*    margin-right: -8px;*/
+/*    margin-bottom: -20px;*/
+/*    padding: 0;*/
+
+/*}*/
+
+/*#header {*/
+/*    color: #86989B;*/
+/*    font-family: "Comic Sans MS";*/
+/*}*/
+
+/*.main-body {*/
+/*    background-image: url("240_F_152577066_WvccQCh0vBhTyF5OCINWGFuzBJNzgB63.jpg");*/
+/*}*/
+
+/*.filter {*/
+/*    float: left;*/
+/*    margin-top: 100px;*/
+/*    width: 30%;*/
+/*    background: #ccc;*/
+/*}*/
+
+/*.blast-result {*/
+/*    float: right;*/
+/*    width: 70%;*/
+/*    background-color: #f1f1f1;*/
+/*}*/
+
+/*@media (max-width: 600px) {*/
+/*    nav {*/
+/*        width: 100%;*/
+/*        height: auto;*/
+/*    }*/
+/*}*/
+
+
+/*.updates {*/
+/*    background-color: #000000;*/
+/*    padding: 20px;*/
+/*    width;*/
+/*    color: #ffffff;*/
+
+/*}*/
+/*#preload-01 { background: url("dna_gif.gif")}*/

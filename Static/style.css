@@ -1,0 +1,287 @@
+* {
+    box-sizing: border-box;
+}
+
+/* Algmeen */
+/* hier komt CSS voor alle pagina's*/
+.navbar ul {
+    list-style-type: none;
+    margin-left: -8px;
+    margin-right: -8px;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+}
+
+.navbar li {
+    float: left;
+}
+
+li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+li a:hover {
+    background-color: #111;
+}
+
+#main-header {
+    width: 100%;
+    height: 75px;
+    background-image: url("../templates/CSS/dna-curtain.jpg");
+    text-align: left;
+    margin-top: -21px;
+    margin-left: 0;
+    margin-right: -8px;
+    margin-bottom: -20px;
+    padding: 0;
+
+}
+
+#header {
+    color: #86989B;
+    font-family: "Comic Sans MS";
+}
+
+.main-body {
+    margin: 0;
+    padding: 0;
+    background-image: url("240_F_152577066_WvccQCh0vBhTyF5OCINWGFuzBJNzgB63.jpg");
+}
+
+@media (max-width: 600px) {
+    nav footer {
+        width: 100%;
+        height: auto;
+    }
+}
+
+/* Ander pagina's  */
+/* zet voor welke pagina het is boven het stukje CSS */
+
+/*Home page */
+.updates {
+    background-color: #000000;
+    padding: 20px;
+    margin-top: 200px;
+    width: 50%;
+    color: #ffffff;
+
+}
+
+/* About page */
+.about {
+    background-color: #f1f1f1;
+    margin-left: 325px;
+    margin-top: 50px;
+    width: 50%;
+    color: #000000;
+}
+
+.side-image-left {
+    float: left;
+    width: 25%;
+    height: 50%;
+}
+
+.side-image-right {
+    float: right;
+    width: 25%;
+    height: 50%;
+}
+
+
+.contact {
+    float: left;
+    background-color: #f1f1f1;
+    margin-top: 10px;
+    margin-left: -10px;
+    width: 25%%;
+    color: #000000;
+}
+
+.faq-sheet {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-top: 10px;
+    width: 50%;
+    color: #000000;
+}
+
+.about-2 {
+    background-color: #f1f1f1;
+    margin-top: 50px;
+    width: 50%;
+    color: #000000;
+}
+
+
+.algemeen {
+    background-color: #f1f1f1;
+    padding: 20px;
+    margin-top: 10px;
+    width: 50%;
+    color: #000000;
+}
+
+.image-about {
+    height: 200px;
+    width: 200px;
+    margin-top: 50px;
+}
+
+
+/* Resultaat */
+/* hier komt de CCS voor de Blast pagina */
+.filter {
+    float: left;
+    margin-top: 10px;
+    width: 100%;
+    background: #ccc;
+    margin-left: 50px;
+}
+
+.filter2 {
+    float: left;
+    margin-top: 100px;
+    width: 30%;
+    background: #ccc;
+    margin-left: 50px;
+}
+
+.info-bar {
+    margin-top: 10px;
+    background: #ccc;
+    margin-left: 50px;
+    margin-bottom: 10px;
+}
+
+#tooltip {
+  position: relative;
+  display: inline-block;
+}
+
+#tooltip .tooltiptext {
+  visibility: hidden;
+  width: 120px;
+  background-color: #555;
+  color: #fff;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 0;
+  position: absolute;
+  z-index: 0;
+  bottom: 0;
+  left: 150%;
+  margin-left: -60px;
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+
+#tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+}
+
+#tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}
+
+table#blast table {
+    overflow-x: auto;
+    height: 50%;
+    width: 75%;
+
+}
+
+table#blast td {
+    border-collapse: collapse;
+    text-align: left;
+    color: black;
+    padding: 0;
+    background-color: lightblue;
+    border-top: 1px solid black;
+
+}
+
+table#blast td:hover {
+    background-color: #485F6E;
+}
+
+table #blast tr {
+    border-collapse: collapse;
+    text-align: left;
+    background-color: #30799B;
+}
+
+
+table #blast table, th {
+    background-color: #30799B;
+    color: #ffffff;
+    border: 2px solid black;
+
+}
+
+
+/* Style The Dropdown Button */
+.dropbtn {
+    float: left;
+    padding: 14px 16px;
+    background-color: #333;
+    color: white;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+    display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    margin-top: 10px;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {
+    background-color: #f1f1f1
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+.dropdown:hover .dropbtn {
+    background-color: #111;
+}
+

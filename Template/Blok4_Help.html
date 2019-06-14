@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blast website</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static',
+        filename='style.css') }}">
+</head>
+<header id="main-header">
+    <h1 id="header">Blastwebsite</h1>
+</header>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<body class="main-body">
+<nav>
+    <div class="navbar">
+        <ul>
+            <li><a href="Blok4_Home.html">Home</a></li>
+            <div class="dropdown">
+                <button class="dropbtn">Resultaat
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="Blok4_Count_Org.html">Resultaat count</a>
+                    <a href="Blok4_Blast.html">Resultaat filter</a>
+                </div>
+            </div>
+            <li><a href="Blok4_Help.html">Help</a></li>
+            <li><a href="Blok4_About.html">About</a></li>
+        </ul>
+    </div>
+</nav>
+<div class="algemeen"><h2>Algemeen</h2>
+    <p>Voor de technische
+        documentatie kunt u <a
+                href="../static/HanHarm_Technische_documentatie_Blok4.docx">hier</a>
+        klikken. Onze
+        contactgegevens
+        staan op de about pagina.</p></div>
+<div class="faq-sheet">
+    <h3>Frequente vragen</h3>
+    <p><b> Waar kan ik de database gegevens bekijken?</b><br><br>
+
+        Op de navigatiebar zijn verscheidene tabbladen zichtbaar, waaronder
+        het
+        tabblad resultaat. Via resultaat kunt u terecht bij 'resultaat filter'
+        en 'resultaat count'.<br> <br>
+
+        <u>Resultaat filter:</u> De gehele database wordt als tabel gegeven,
+        hierbij
+        kan door de gebruiker bepaald worden welke kolommen en het aantal
+        resultaten zichtbaar zullen zijn. De weergave is gebaseerd op het
+        ingevoerde zoekwoord.<br><br>
+
+        <u>Resultaat count:</u> U kunt in de zoekbalk aangeven op welk woord u
+        wilt
+        zoeken en in welke tabel. Er wordt geteld op het aantal hits van uw
+        ingevoerde zoekwoord en als tabel weergegeven. Dit is alleen mogelijk
+        om te tellen in de tabel van organismen (species niveau) of in de tabel
+        van eiwitten. </p>
+
+</div>
+</body>
+
+</html>
